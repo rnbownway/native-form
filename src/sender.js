@@ -7,13 +7,15 @@ class Sender {
   }
 
   send() {
-    let promise = new Promise(res => {
-      setTimeout(
-        res,
-        1000,
-        `form submitted: fio: ${this.fio}, phone: ${this.phone}, inn: ${this.inn}, bday: ${this.bday}`
-      )
-    })
-    promise.then(result => console.log(result))
+    let data = {
+      fio: this.fio,
+      phone: this.phone,
+      inn: this.inn,
+      bday: this.bday
+    }
+
+    const request = fetch('https://localhost:3000/submit', { method: 'POST', body: JSON.stringify(data) })
+
+    console.log('Запрос отправлен', data)
   }
 }
