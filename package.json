@@ -1,7 +1,16 @@
 {
-  "name": "untitled1",
+  "name": "native-form",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Alexander Stryabkov",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

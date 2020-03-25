@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+          href="https://fonts.googleapis.com/css?family=Raleway"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+<form id="regForm">
+  <div class="tab">
+    <h1>ФИО и телефонный номер</h1>
+    <p>
+      <input
+              placeholder="ФИО"
+              name="fio"
+              id="fio"
+      />
+      <span id="fio_error"></span>
+    </p>
+    <p>
+      <input
+              type="tel"
+              placeholder="Номер телефона"
+              name="phone"
+              id="phone"
+      />
+      <span id="phone_error"></span>
+    </p>
+  </div>
+  <div class="tab">
+    <h1>ИНН и дата рождения</h1>
+    <p>
+      <input
+              placeholder="ИНН"
+              name="inn"
+              id="inn"
+      />
+      <span id="inn_error"></span>
+    </p>
+    <p>
+      <input
+              type="date"
+              name="bday"
+              id="bday"
+      />
+      <span id="bday_error"></span>
+    </p>
+  </div>
+  <div class="tab">
+    <h1>Заявка отправлена</h1>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="switchTab(-1)">
+        Назад
+      </button>
+      <button type="button" id="nextBtn" onclick="switchTab(1)">
+        Дальше
+      </button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script src="sender.js"></script>
+<script src="validators.js"></script>
+<script src="form.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
